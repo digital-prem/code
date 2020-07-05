@@ -1,0 +1,18 @@
+version: '3'
+
+networks:
+    mynetwork:
+
+
+services: 
+    nginx:
+        build: .
+        container_name: nginxserver
+        ports: 
+            - "80:80"
+        #volumes: 
+         #   - ./code:/usr/share/nginx/html
+            #- /nginx:/etc/nginx
+
+        networks: 
+            - mynetwork
